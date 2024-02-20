@@ -1,0 +1,6 @@
+Configurar o Git Local
+git config --global user.name delfinojulia
+git config --global user.email juliadelfino40@gmail.com
+
+Criar o projeto
+dotnet new mvc -o Cozastore 
