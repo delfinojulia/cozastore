@@ -27,7 +27,7 @@ public class Produto
     [StringLength(10, ErrorMessage = "O SKU deve possuir no máximo 10 caracteres")]
     public string SKU { get; set; }
 
-    [Display(Name = "Preço de Venda")]
+    [Display(Name = "Preço")]
     [Column(TypeName = "decimal(12,2)")] // 9.999.999.999,99
     [Required(ErrorMessage = "Por favor, informe o Preço de Venda")]
     public decimal Preco { get; set; }
@@ -55,4 +55,6 @@ public class Produto
     public int CategoriaId { get; set; }
     [ForeignKey("CategoriaId")]
     public Categoria Categoria { get; set; }
+
+    public ICollection <Estoque> EStoque {get; set;}
 }
