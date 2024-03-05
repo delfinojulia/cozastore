@@ -19,6 +19,6 @@ public int ProdutoId {get; set;}
    [StringLength (300)]
    public string ArquivoFoto { get; set; }
 
-   [Display (Name ="Foto DEstaque?")]
+   [Display (Name ="Foto Destaque?")]
    public bool Destaque {get; set;} = false;
 }

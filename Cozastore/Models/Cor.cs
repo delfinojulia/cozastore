@@ -19,5 +19,5 @@ public class Cor
     [StringLength (30, ErrorMessage = "O Código Hexa deve possuir no máximo 30 caracteres")]
    public string CodigoHexa { get; set; }
 
-   public ICollection <Estoque> EStoque {get; set;}
+   public ICollection <Estoque> Estoque {get; set;}
 }
