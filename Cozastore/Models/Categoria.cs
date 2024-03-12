@@ -24,8 +24,9 @@ public class Categoria
     public bool Banner { get; set; } = false;
 
     [Display(Name = "Categoria Mae")]
-    public int? CategoriaMaeiId { get; set; }
+    public int? CategoriaMaeId { get; set; }
     [ForeignKey("CategoriaMaeId")]
-    public Categoria CategoriaPai { get; set; }
+    public Categoria CategoriaMae {get; set; }
+    public ICollection<Produto> Produtos { get; set; }
     
 }
