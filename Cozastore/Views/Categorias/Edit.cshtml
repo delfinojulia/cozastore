@@ -41,6 +41,7 @@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
+           
         </form>
     </div>
 </div>
@@ -49,3 +50,16 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+@section Scripts {
+    <script>
+        window.addEventListener('load', function() {
+            document.querySelector('input[type=file]').addEventListener('change', function() {
+                if (this.files && this.file[0]) {
+                    var img = document.getElementById('Preview');
+                    img.src = URL.createObjectURL(this.files[0]);
+                }
+            });
+        });
+
+    </script>
+}
