@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cozastore.Controllers;
 
-    public class AdminController : Controller
-    {
+[Authorize(Roles = "Administrador")]
+public class AdminController : Controller
+{
         private readonly ILogger<AdminController> _logger;
 
         public AdminController(ILogger<AdminController> logger)
@@ -21,4 +23,5 @@ namespace Cozastore.Controllers;
         {
             return View("Error!");
         }
-    }
+        
+}
